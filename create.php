@@ -30,7 +30,7 @@ $isValid = true;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $user = array_merge ($user, $_POST);
+    $user = array_merge ($user, $_POST);       //  input values remains if error
 
     $name = $_POST['name'];
     $username = $_POST['username'];

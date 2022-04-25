@@ -24,7 +24,16 @@ function createUser($data)
 
 function deleteUser ($id)
 {
- 
+    $users = getUsers();
+
+    foreach ($users as $i => $user) {         
+        if ($user['id'] == $id) {            
+            array_splice($users, $i, 1);    // start from index number "$i" and delete one element
+        }
+    }
+  
+    putJson($users);
+  
 
 };
 

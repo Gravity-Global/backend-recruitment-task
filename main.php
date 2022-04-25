@@ -44,6 +44,12 @@ $users = getUsers();
                                  echo $user['company']; }
                                  else {
                             echo $user['company']['name']; }?> 
+                    </td>
+                    <td>
+                        <form method="POST" action="delete.php">
+                            <input type="hidden" name="id" value="<?php echo $user['id'] ?>">
+                            <button class="btn btn-sm btn-danger">Remove</button>
+                        </form>
                     </td>   
 
              </tr>

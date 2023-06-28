@@ -14,3 +14,4 @@ class View
 		include 'partials/views/'.$template_view;
 	}
 }
+

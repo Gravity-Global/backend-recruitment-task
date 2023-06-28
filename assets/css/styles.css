@@ -207,9 +207,9 @@ footer {
     cursor: auto;
     font-size: 16px;
 }
-.coll {
+/* .coll {
 	display: inline-block;
-}
+} */
 
  
 .modal-overlay_visible .modal {
@@ -266,6 +266,8 @@ footer {
  
 .item {
     position: relative;
+	display: inline-block;
+	width: 189px;
 }
  
 .item label.error {

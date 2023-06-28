@@ -18,6 +18,16 @@ class Controller_Users extends Controller
 	function action_add_user()
 	{
 
+		$_POST['id'] = count($this->users);
+		array_push($this->users, $_POST);
+
+		$save = $this->model->save($this->users);
+		// echo json_encode(array(
+		// 	'date'=>$_POST
+		// ));
+
+		header('Location: '.'/users');
+		$this->view->generate('users_view.tpl', 'template_view.tpl', $this->users);
 	}
 	function action_delete_user()
 	{

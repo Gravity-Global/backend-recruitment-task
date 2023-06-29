@@ -13,7 +13,7 @@ class Model_Users extends Model
 	
 	public function save($data)
 	{	
-		$data = json_encode($data);  
+		$data = json_encode($data, JSON_PRETTY_PRINT);  
 		file_put_contents($this->file, $data);
 
 		return true;

@@ -1,6 +1,5 @@
 // Add your custom scripts here
 
-
 $(document).ready(function () {     
     $(".modal-link").on("click", function() {
         $('.modal-overlay').addClass("modal-overlay_visible");
@@ -17,6 +16,7 @@ $(document).ready(function () {
     });
 });
 
+
 function delete_user(id) {
     $.ajax({
         type: "POST",
@@ -27,41 +27,23 @@ function delete_user(id) {
         },
         success: function(data){
             if(data.result == "good"){
+                $('#message').removeClass('message').html('');
+                $("#tr"+id).remove(); 
                 $('#message').addClass('message').html(data.html);
-                $("#tr"+id).remove();                
+                var timer = setTimeout(function(){
+                    $('#message').removeClass('message').html('');
+                    }, 3000);                   
             }
             else if(data.result == 'error'){
                 alert(data.html);
             }
         } 
-    });
+    }); 
 }
-console.log('Good luck 👌');
 
 
-// $.ajax({
-//     url: '/users',
-//     method: 'get',
-//     dataType: 'json',
-//     success: function(data){
-// 	console.dir(data);
-//     },
-//     error: function (jqXHR, exception) {
-// 	if (jqXHR.status === 0) {
-// 		alert('Not connect. Verify Network.');
-// 	} else if (jqXHR.status == 404) {
-// 		alert('Requested page not found (404).');
-// 	} else if (jqXHR.status == 500) {
-// 		alert('Internal Server Error (500).');
-// 	} else if (exception === 'parsererror') {
-// 		alert('Requested JSON parse failed.');
-// 	} else if (exception === 'timeout') {
-// 		alert('Time out error.');
-// 	} else if (exception === 'abort') {
-// 		alert('Ajax request aborted.');
-// 	} else {
-// 		alert('Uncaught Error. ' + jqXHR.responseText);
-// 	}
-//     }
-// });
+// console.log('Good luck 👌');
+
+
+
 

@@ -17,14 +17,14 @@
     </thead>
     <tbody>
         <?php foreach($data AS $id => $user){ ?>
-                <tr id = tr<?php echo $id ?>>
+                <tr id = tr<?php echo $user['id'] ?>>
                     <td><?php echo $user['name']?></td>
                     <td><?php echo $user['username'] ?></td>
                     <td><?php echo $user['email']?></td>
                     <td><?php echo $user['address']['street'].' '.$user['address']['zipcode'].' '.$user['address']['city'] ?></td>
                     <td><?php echo $user['phone'] ?></td>
                     <td><?php echo $user['company']['name'] ?></td>
-                    <td><button onclick="delete_user( <?php echo $id ?> )" class="btn btn-prima ">Delete</button></td>
+                    <td><button onclick="delete_user( <?php echo $user['id'] ?> )" class="btn btn-prima ">Delete</button></td>
                 </tr>
         <?php }?>
     </tbody>

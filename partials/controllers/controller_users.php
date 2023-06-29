@@ -17,8 +17,8 @@ class Controller_Users extends Controller
 
 	function action_add_user()
 	{
-
-		$_POST['id'] = count($this->users);
+		$ids = array_column($this->users, 'id');
+		$_POST['id'] = max($ids)+1;
 		array_push($this->users, $_POST);
 
 		$save = $this->model->save($this->users);
@@ -31,22 +31,27 @@ class Controller_Users extends Controller
 	}
 	function action_delete_user()
 	{
-		if(!empty($_POST['id'])){
-			$user = $this->users[$_POST['id']];
-			unset($this->users[$_POST['id']]);
-
+		if($_POST['id']!=''){
+			$user_del = '';
+			foreach($this->users AS $key => $user){
+				if($_POST['id'] == $user['id'] ){
+					$user_del = $this->users[$key];
+					unset($this->users[$key]);
+					break;
+				}
+			}
 			$save = $this->model->save($this->users);
 
 			echo json_encode(array(
 				'result'=>'good',
-				'html'=>'User '.$user['name']. ' deleted'
+				'html'=>'User '.$user_del['name']. ' deleted'
 			));
 			return;
 		}
 		else{
 			echo json_encode(array(
 				'result'=>'error',
-				'html'=>'ERROR User '.$user['name']. ' not deleted'
+				'html'=>'ERROR User '.$_POST['id'].$user_del['name']. ' not deleted'
 			));
 			return;
 		}

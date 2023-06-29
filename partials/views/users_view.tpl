@@ -120,13 +120,12 @@
                                 <label for="zipcode">Zipcode</label>
                                 <input type="text" size="30" value="" name="address[zipcode]" id="address_zipcode" class="form-control">
                             </p>                            
-                            <p>Geo</p>
                             <p class="item">
-                                <label for="lat">lat</label>
+                                <label for="lat">Geo_lat</label>
                                 <input type="text" size="30" value="" name="address[geo][lat]" id="phone" class="form-control">
                             </p>
                             <p class="item">
-                                <label for="lng">lng</label>
+                                <label for="lng">Geo_lng</label>
                                 <input type="text" size="30" value="" name="address[geo][lng]" id="phone" class="form-control">
                             </p>
                         </div>

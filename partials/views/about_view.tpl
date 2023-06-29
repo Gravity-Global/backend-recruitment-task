@@ -1,4 +1,4 @@
-<h1 class='title'>Vitalii Pasichnik</h1>
+<h1 class='title'>Vitalii Pasichnik &#128075;</h1>
 
 <div class="danefirmy"> 
     <p><strong>Hard skills: </strong>PHP, MySQL, Laravel, PrestaShop, OpenCart, CakePHP</p>

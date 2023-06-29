@@ -126,7 +126,7 @@ header {
 .message{
 	background: #f1b1b1;
 	font-size: 1em;
-	transition: 3s;
+	transition: 1s;
 	padding-left: 40%;
 }
 
@@ -294,6 +294,10 @@ footer {
     font-weight: 600;
     margin: 0 auto;
 }
+.modal-link:hover, .theme_button:hover {
+	background-color: #f90;
+}
+
  
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], textarea, select, .form-control {
     border: none;

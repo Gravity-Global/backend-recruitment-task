@@ -21,19 +21,19 @@ class Controller_Users extends Controller
 
 		$errors = array();
 
-		// name                            
-		// username
-		// email
-		// phone
+		//* name                            
+		//* username
+		//* email
+		//* phone
 		// website
 
-		// company_name
+		//* company_name
 		// company_catchPhrase
 		// company_bs
 
-		// address_street
-		// address_suite
-		// address_city
+		//* address_street
+		//* address_suite
+		//* address_city
 		// address_zipcode
 		// address_geo_lat
 		// address_geo_lng
@@ -52,20 +52,28 @@ class Controller_Users extends Controller
         if ($this->emailExists($_POST['email'])) {
             $errors['email'] = "Email is already taken";
         }
-		// if (!preg_match("/^\+1 \(\d{3}\) \d{3}-\d{4}$/", $_POST['phone'])) {
-        //     $errors['phone'] = "Invalid phone";
-        // }
+		if (!preg_match("/^\+48\s\d{3}\s\d{3}\s\d{3}$/", $_POST['phone'])) {
+            $errors['phone'] = "Invalid phone +48 xxx xxx xxx";
+        }
 
-        // if (!preg_match("/^[a-zA-Z0-9\. ]*$/", $_POST['street'])) {
-        //     $errors['street'] = "Invalid street";
-        // }
+		if (!preg_match("/^\s*[a-zA-Z][a-zA-Z\s]*$/", $_POST['company']['name'])) {
+            $errors['company_name'] = "Invalid company name";
+        }
 
-        // if (!preg_match("/^[a-zA-Z ]*$/", $_POST['city'])) {
-        //     $errors['city'] = "Invalid city";
-        // }
+        if (!preg_match("/^[a-zA-Z0-9\. ]*$/", $_POST['address']['street'])) {
+            $errors['address_street'] = "Invalid street";
+        }
 
-        // if (!preg_match("/^\d{5}(-\d{4})?$/", $_POST['zipcode'])) {
-        //     $errors['zipcode'] = "Invalid zip code";
+        if (!preg_match("/^[a-zA-Z ]*$/", $_POST['address']['suite'])) {
+            $errors['address_suite'] = "Invalid suite";
+        }
+
+		if (!preg_match("/^\s*[a-zA-Z][a-zA-Z\s]*$/", $_POST['address']['city'])) {
+            $errors['address_city'] = "Invalid city";
+        }
+
+        // if (!preg_match("/^\d{5}(-\d{4})?$/", $_POST['address']['zipcode'])) {
+        //     $errors['address_zipcode'] = "Invalid zip code";
         // }
 
         if (isset($errors) && !empty($errors)) {

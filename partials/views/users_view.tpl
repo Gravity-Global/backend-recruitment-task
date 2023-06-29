@@ -49,83 +49,83 @@
                             <h4>User</h4>
                             <input value="" name="id" id="id" type="hidden">                       
                             <p class="item">
-                                <label for="name">Name <span class="required">*</span></label>                                
-                                <input type="text" value="" name="name" id="name" minlength="3" maxlength="100" required >
+                                <!-- <label for="name">Name <span class="required">*</span></label>                                 -->
+                                <input type="text" value="" name="name" id="name" minlength="3" maxlength="100" placeholder="Name" required >
                                 <label class="errorMsg"></label>
                             </p>
                             <p class="item">
-                                <label for="username" >User name <span class="required">*</span></label>
-                                <input type="text" size="30" value="" name="username" id="username" minlength="3" maxlength="100" required>
+                                <!-- <label for="username" >User name <span class="required">*</span></label> -->
+                                <input type="text"  value="" name="username" id="username" minlength="3" maxlength="100" placeholder="User name" required>
                                 <label class="errorMsg"></label>
                             </p>
                             <p class="item">
-                                <label for="phone">Phone <span class="required">*</span></label>
-                                <input type="phone" name="phone" pattern="\+48\[0-9]{9}" placeholder="+48 xxx xxx xxx" value="" id="phone">                                
+                                <!-- <label for="phone">Phone <span class="required">*</span></label> -->
+                                <input type="phone" name="phone" pattern="\+48\\s[0-9]{3}\s[0-9]{3}\s[0-9]{3}" placeholder="+48 xxx xxx xxx" value="" id="phone" required>                                
                                 <label class="errorMsg"></label>
                             </p>
                             <p class="item">
-                                <label for="email">Email <span class="required">*</span></label>
-                                <input type="email" size="30" value="" name="email" id="email" required>
+                                <!-- <label for="email">Email <span class="required">*</span></label> -->
+                                <input type="email" value="" name="email" id="email" placeholder="Email" required>
                                 <label class="errorMsg"></label>
                             </p>
                             <p class="item">
-                                <label for="website">Website</label>
-                                <input type="url" size="30" value="" name="website" id="website" >
+                                <!-- <label for="website">Website</label> -->
+                                <input type="url"  value="" name="website" id="website" placeholder="Website" >
                                 <label class="errorMsg"></label>
                             </p>
                         </div>  
                         <div class="coll">  
                             <h4>Company</h4> 
                             <p class="item">
-                                <label for="company_name">Name <span class="required">*</span></label>
-                                <input type="text" size="30" value="" name="company[name]" id="company_name" required>
+                                <!-- <label for="company_name">Name <span class="required">*</span></label> -->
+                                <input type="text"  value="" name="company[name]" id="company_name" placeholder="Name" required>
                                 <label class="errorMsg"></label>
                             </p>
                             <p class="item">
-                                <label for="company_catchPhrase">CatchPhrase</label>
-                                <input type="text" size="30" value="" name="company[catchPhrase]" id="company_catchPhrase" >
+                                <!-- <label for="company_catchPhrase">CatchPhrase</label> -->
+                                <input type="text"  value="" name="company[catchPhrase]" id="company_catchPhrase" placeholder="CatchPhrase" >
                                 <label class="errorMsg"></label>
                             </p>
                             <p class="item">
-                                <label for="bs">Bs</label>
-                                <input type="text" size="30" value="" name="company[bs]" id="company_bs">
+                                <!-- <label for="bs">Bs</label> -->
+                                <input type="text"  value="" name="company[bs]" id="company_bs" placeholder="Bs">
                                 <label class="errorMsg"></label>
                             </p>
                         </div>  
                         <div class="coll"></div>                       
                             <h4>Address</h4>
                             <p class="item">
-                                <label for="address_street">Street <span class="required">*</span></label>
-                                <input type="text" value="" name="address[street]" id="address_street" required>
+                                <!-- <label for="address_street">Street <span class="required">*</span></label> -->
+                                <input type="text" value="" name="address[street]" id="address_street" placeholder="Street" required>
                                 <label class="errorMsg"></label>
                             </p>
                             <p class="item">
-                                <label for="suite">Suite <span class="required">*</span></label>
-                                <input type="text" size="30" value="" name="address[suite]" id="address_suite" required>
+                                <!-- <label for="suite">Suite <span class="required">*</span></label> -->
+                                <input type="text"  value="" name="address[suite]" id="address_suite" placeholder="Suite" required>
                                 <label class="errorMsg"></label>
                             </p>
                             <p class="item">
-                                <label for="address_city">City<span class="required">*</span></label>
-                                <input type="text" value="" name="address[city]" id="address_city" required>
+                                <!-- <label for="address_city">City<span class="required">*</span></label> -->
+                                <input type="text" value="" name="address[city]" id="address_city" placeholder="City" required>
                                 <label class="errorMsg"></label>
                             </p>
                             <p class="item">
-                                <label for="address_zipcode">Zipcode</label>
-                                <input type="text" size="30" value="" name="address[zipcode]" id="address_zipcode">
+                                <!-- <label for="address_zipcode">Zipcode</label> -->
+                                <input type="text"  value="" name="address[zipcode]" id="address_zipcode" placeholder="Zipcode">
                                 <label class="errorMsg"></label>
                             </p>                            
                             <p class="item">
-                                <label for="address_geo_lat">Geo_lat</label>
-                                <input type="text" size="30" value="" name="address[geo][lat]" id="address_geo_lat">
+                                <!-- <label for="address_geo_lat">Geo_lat</label> -->
+                                <input type="text"  value="" name="address[geo][lat]" id="address_geo_lat" placeholder="Geo lat">
                                 <label class="errorMsg"></label>
                             </p>
                             <p class="item">
-                                <label for="address_geo_lng">Geo_lng</label>
-                                <input type="text" size="30" value="" name="address[geo][lng]" id="address_geo_lng">
+                                <!-- <label for="address_geo_lng">Geo_lng</label> -->
+                                <input type="text"  value="" name="address[geo][lng]" id="address_geo_lng" placeholder="Geo lng">
                                 <label class="errorMsg"></label>
                             </p>
                         </div>
-                        <p class="contact-form-submit text-center topmargin_30">
+                        <!-- <p class="contact-form-submit text-center topmargin_30"> -->
                             <button type="button" onclick="sendAjaxForm();" id="btn_ADD" class="theme_button color1">ADD</button>
                         </p>
                 </div>

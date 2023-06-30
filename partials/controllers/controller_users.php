@@ -17,8 +17,6 @@ class Controller_Users extends Controller
 
 	function action_add_user()
 	{
-
-
 		$errors = array();
 
 		//* name                            
@@ -60,11 +58,11 @@ class Controller_Users extends Controller
             $errors['company_name'] = "Invalid company name";
         }
 
-        if (!preg_match("/^[a-zA-Z0-9\. ]*$/", $_POST['address']['street'])) {
+        if (!preg_match("/^\s*[a-zA-Z][a-zA-Z\s][a-zA-Z0-9]*$/", $_POST['address']['street'])) {
             $errors['address_street'] = "Invalid street";
         }
 
-        if (!preg_match("/^[a-zA-Z ]*$/", $_POST['address']['suite'])) {
+        if (!preg_match("/^\s*[a-zA-Z][a-zA-Z\s][a-zA-Z0-9]*$/", $_POST['address']['suite'])) {
             $errors['address_suite'] = "Invalid suite";
         }
 
